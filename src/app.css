@@ -201,6 +201,64 @@ tbody tr:nth-child(even) {
   overflow-x: auto;
 }
 
+/* Below this width, wide tables stack into one card per row instead of
+   relying on horizontal scroll — a scrollbar-hunt on a phone reads as broken. */
+@media (max-width: 640px) {
+  .scroll-x {
+    overflow-x: visible;
+  }
+  table.stack {
+    border: none;
+    width: 100%;
+  }
+  table.stack thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+  table.stack,
+  table.stack tbody,
+  table.stack tr,
+  table.stack td {
+    display: block;
+    width: 100%;
+  }
+  table.stack tr {
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    background: var(--surface);
+    padding: 0.5rem 0.6rem;
+    margin-bottom: 0.6rem;
+  }
+  table.stack tbody tr:nth-child(even) {
+    background: var(--surface);
+  }
+  table.stack td {
+    border: none;
+    border-bottom: 1px dashed var(--border);
+    padding: 0.35rem 0;
+  }
+  table.stack td:last-child {
+    border-bottom: none;
+  }
+  table.stack td::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 0.2rem;
+  }
+  table.stack td[data-label='']::before {
+    display: none;
+  }
+}
+
 input,
 select {
   font: inherit;

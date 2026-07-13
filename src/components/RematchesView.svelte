@@ -54,23 +54,23 @@
 {#if tab === 'gym'}
   <p class="muted">{gymNote}</p>
   <div class="card scroll-x">
-    <table>
+    <table class="stack">
       <thead>
         <tr><th>Líder</th><th>Tipo</th><th>Región</th><th>📞 Conseguir número</th><th>Llamar</th><th>Equipo</th></tr>
       </thead>
       <tbody>
         {#each gyms as g (g.leader)}
           <tr>
-            <td><strong>{g.leader}</strong></td>
-            <td>{g.type}</td>
-            <td><RegionBadge region={g.region} /></td>
-            <td class="phone">
+            <td data-label="Líder"><strong>{g.leader}</strong></td>
+            <td data-label="Tipo">{g.type}</td>
+            <td data-label="Región"><RegionBadge region={g.region} /></td>
+            <td class="phone" data-label="Conseguir número">
               <strong>{g.phone.where}</strong><br />
               <span class="muted">{g.phone.when}</span><br />
               {g.phone.how}
             </td>
-            <td>{DAY_LABELS[g.callWindow.day]}<br /><span class="muted">{PERIOD_LABELS[g.callWindow.period]}</span></td>
-            <td><TeamList team={g.team} /></td>
+            <td data-label="Llamar">{DAY_LABELS[g.callWindow.day]}<br /><span class="muted">{PERIOD_LABELS[g.callWindow.period]}</span></td>
+            <td data-label="Equipo"><TeamList team={g.team} /></td>
           </tr>
         {/each}
         {#if gyms.length === 0}
@@ -85,19 +85,19 @@
     {trainerNote} Registrá su número de Pokégear y llamalos en el día indicado.
   </p>
   <div class="card scroll-x">
-    <table>
+    <table class="stack">
       <thead>
         <tr><th>Entrenador</th><th>Región</th><th>Ubicación</th><th>Días</th><th>Horario</th><th>Equipo</th></tr>
       </thead>
       <tbody>
         {#each trs as t (t.id)}
           <tr>
-            <td><strong>{t.trainer}</strong></td>
-            <td><RegionBadge region={t.region} /></td>
-            <td>{t.location}</td>
-            <td>{t.callDays.map((d) => DAY_LABELS[d]).join(', ')}</td>
-            <td>{PERIOD_LABELS[t.period]}<br /><span class="muted">{t.hours}</span></td>
-            <td><TeamList team={t.team} /></td>
+            <td data-label="Entrenador"><strong>{t.trainer}</strong></td>
+            <td data-label="Región"><RegionBadge region={t.region} /></td>
+            <td data-label="Ubicación">{t.location}</td>
+            <td data-label="Días">{t.callDays.map((d) => DAY_LABELS[d]).join(', ')}</td>
+            <td data-label="Horario">{PERIOD_LABELS[t.period]}<br /><span class="muted">{t.hours}</span></td>
+            <td data-label="Equipo"><TeamList team={t.team} /></td>
           </tr>
         {/each}
         {#if trs.length === 0}
@@ -130,5 +130,13 @@
   .phone {
     min-width: 190px;
     font-size: 0.82rem;
+  }
+  @media (max-width: 640px) {
+    .filters {
+      gap: 0.5rem;
+    }
+    .phone {
+      min-width: 0;
+    }
   }
 </style>
