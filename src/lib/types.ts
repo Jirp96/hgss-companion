@@ -20,11 +20,24 @@ export interface GameEvent {
   versions: Version[];
   notes: string;
   versionNotes?: Partial<Record<Version, string>>;
+  // Persistent tasks (e.g. collecting a leader's phone number) stay "done"
+  // forever instead of resetting each day.
+  persistent?: boolean;
 }
 
 export interface TeamMember {
   name: string;
   level: number | null;
+}
+
+export interface PhoneInfo {
+  where: string;
+  when: string;
+  how: string;
+  // Structured availability + location, used to derive daily "get the number" events.
+  mapNode: string;
+  days: 'daily' | Day[];
+  time: TimeWindow | null;
 }
 
 export interface GymLeader {
@@ -34,6 +47,7 @@ export interface GymLeader {
   location: string;
   awaySchedule: string;
   callWindow: { day: Day; period: Period };
+  phone: PhoneInfo;
   team: TeamMember[];
 }
 
@@ -53,6 +67,8 @@ export interface MapNode {
   name: string;
   region: Region;
   flyPoint: boolean;
+  x: number;
+  y: number;
 }
 
 export interface WalkEdge {

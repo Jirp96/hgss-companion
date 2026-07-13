@@ -56,7 +56,7 @@
   <div class="card scroll-x">
     <table>
       <thead>
-        <tr><th>Líder</th><th>Tipo</th><th>Región</th><th>Llamar</th><th>Ubicación</th><th>Equipo</th></tr>
+        <tr><th>Líder</th><th>Tipo</th><th>Región</th><th>📞 Conseguir número</th><th>Llamar</th><th>Equipo</th></tr>
       </thead>
       <tbody>
         {#each gyms as g (g.leader)}
@@ -64,8 +64,12 @@
             <td><strong>{g.leader}</strong></td>
             <td>{g.type}</td>
             <td><RegionBadge region={g.region} /></td>
+            <td class="phone">
+              <strong>{g.phone.where}</strong><br />
+              <span class="muted">{g.phone.when}</span><br />
+              {g.phone.how}
+            </td>
             <td>{DAY_LABELS[g.callWindow.day]}<br /><span class="muted">{PERIOD_LABELS[g.callWindow.period]}</span></td>
-            <td>{g.location}</td>
             <td><TeamList team={g.team} /></td>
           </tr>
         {/each}
@@ -122,5 +126,9 @@
   }
   label {
     font-size: 0.88rem;
+  }
+  .phone {
+    min-width: 190px;
+    font-size: 0.82rem;
   }
 </style>
