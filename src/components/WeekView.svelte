@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { events, eventsSource } from '../lib/data';
+  import { allEvents, eventsSource } from '../lib/data';
   import { version, now } from '../lib/stores';
   import { DAYS, DAY_LABELS, occursOnDay, availableInVersion, todayDay } from '../lib/dateUtils';
   import type { Day } from '../lib/types';
@@ -7,10 +7,10 @@
   import SourceAttribution from './SourceAttribution.svelte';
 
   $: today = todayDay($now);
-  let openDay: Day | null = null;
-  $: if (openDay === null) openDay = today;
+  // Default to today, but allow every panel to be closed (null).
+  let openDay: Day | null = todayDay();
 
-  $: forVersion = events.filter((e) => availableInVersion(e, $version));
+  $: forVersion = allEvents.filter((e) => availableInVersion(e, $version));
   function eventsFor(day: Day) {
     return forVersion.filter((e) => occursOnDay(e, day));
   }
@@ -34,7 +34,7 @@
     {#if openDay === day}
       <div class="day-body">
         {#each list as event (event.id)}
-          <EventCard {event} sourceUrl={eventsSource} />
+          <EventCard {event} />
         {/each}
       </div>
     {/if}

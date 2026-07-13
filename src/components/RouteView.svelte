@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { events, eventsSource, mapNodes } from '../lib/data';
-  import { version, now, done } from '../lib/stores';
+  import { allEvents, eventsSource, mapNodes } from '../lib/data';
+  import { version, now, done, permanentDone } from '../lib/stores';
   import {
     DAYS,
     DAY_LABELS,
@@ -9,8 +9,9 @@
     todayDay,
   } from '../lib/dateUtils';
   import { planRoute } from '../lib/route';
-  import type { Day } from '../lib/types';
+  import type { Day, GameEvent } from '../lib/types';
   import RegionBadge from './RegionBadge.svelte';
+  import RegionMap from './RegionMap.svelte';
   import SourceAttribution from './SourceAttribution.svelte';
 
   $: today = todayDay($now);
@@ -23,12 +24,15 @@
   const flyPoints = mapNodes.filter((n) => n.flyPoint);
   const nodeName = new Map(mapNodes.map((n) => [n.id, n.name]));
 
+  $: isDone = (e: GameEvent) =>
+    e.persistent ? $permanentDone.includes(e.id) : $done.ids.includes(e.id);
+
   // Events active on the chosen day, filtered by version and (optionally) done.
-  $: active = events.filter(
+  $: active = allEvents.filter(
     (e) =>
       availableInVersion(e, $version) &&
       occursOnDay(e, day!) &&
-      (!excludeDone || !$done.ids.includes(e.id))
+      (!excludeDone || !isDone(e))
   );
 
   // Events that can be routed (have a map node) vs. those that can't.
@@ -82,6 +86,13 @@
     <strong>{result.jumps}</strong> vuelos/saltos ·
     <strong>{result.crossings}</strong> cruce(s) de región
   </p>
+
+  <div class="map-wrap">
+    <RegionMap path={result.order} crossings={result.legs.map((l) => l.crossesRegion)} />
+    <p class="legend muted">
+      Los números marcan el orden. Las líneas punteadas moradas son cruces entre regiones.
+    </p>
+  </div>
 
   <ol class="stops">
     {#each result.order as node, i (node.id)}
@@ -141,6 +152,13 @@
   }
   .summary {
     margin: 1rem 0 0.5rem;
+  }
+  .map-wrap {
+    margin: 0.5rem 0 1rem;
+  }
+  .legend {
+    margin: 0.4rem 0 0;
+    font-size: 0.8rem;
   }
   .stops {
     list-style: none;

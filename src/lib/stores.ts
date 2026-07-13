@@ -59,6 +59,20 @@ function createDoneStore() {
 
 export const done = createDoneStore();
 
+/**
+ * Permanent "done" ids for one-time tasks (e.g. collecting a leader's phone
+ * number). Unlike `done`, these never reset when the day rolls over.
+ */
+function createPermanentDone() {
+  const store = persisted<string[]>('permanentDone', []);
+  function toggle(id: string) {
+    store.update((ids) => (ids.includes(id) ? ids.filter((x) => x !== id) : [...ids, id]));
+  }
+  return { subscribe: store.subscribe, toggle };
+}
+
+export const permanentDone = createPermanentDone();
+
 // A ticking clock (updates every 30s) so time-window UI stays fresh.
 function createNow() {
   const store = writable<Date>(new Date());
