@@ -1,0 +1,46 @@
+{
+  "source": "Curado a mano (topología no tabulada en Serebii)",
+  "sourceUrl": "https://www.serebii.net/heartgoldsoulsilver",
+  "note": "El módulo de ruta añade aristas de Fly (coste 1) entre todos los flyPoint de una misma región. walkEdges conectan venues sin Fly a su pueblo. crossEdges son los cruces Johto↔Kanto.",
+  "nodes": [
+    { "id": "new-bark", "name": "New Bark Town", "region": "Johto", "flyPoint": true },
+    { "id": "cherrygrove", "name": "Cherrygrove City", "region": "Johto", "flyPoint": true },
+    { "id": "violet", "name": "Violet City", "region": "Johto", "flyPoint": true },
+    { "id": "azalea", "name": "Azalea Town", "region": "Johto", "flyPoint": true },
+    { "id": "goldenrod", "name": "Goldenrod City", "region": "Johto", "flyPoint": true },
+    { "id": "ecruteak", "name": "Ecruteak City", "region": "Johto", "flyPoint": true },
+    { "id": "olivine", "name": "Olivine City", "region": "Johto", "flyPoint": true },
+    { "id": "cianwood", "name": "Cianwood City", "region": "Johto", "flyPoint": true },
+    { "id": "mahogany", "name": "Mahogany Town", "region": "Johto", "flyPoint": true },
+    { "id": "blackthorn", "name": "Blackthorn City", "region": "Johto", "flyPoint": true },
+    { "id": "national-park", "name": "National Park", "region": "Johto", "flyPoint": false },
+    { "id": "pokeathlon-dome", "name": "Pokéathlon Dome", "region": "Johto", "flyPoint": false },
+    { "id": "union-cave", "name": "Union Cave", "region": "Johto", "flyPoint": false },
+
+    { "id": "pallet", "name": "Pallet Town", "region": "Kanto", "flyPoint": true },
+    { "id": "viridian", "name": "Viridian City", "region": "Kanto", "flyPoint": true },
+    { "id": "pewter", "name": "Pewter City", "region": "Kanto", "flyPoint": true },
+    { "id": "cerulean", "name": "Cerulean City", "region": "Kanto", "flyPoint": true },
+    { "id": "vermilion", "name": "Vermilion City", "region": "Kanto", "flyPoint": true },
+    { "id": "lavender", "name": "Lavender Town", "region": "Kanto", "flyPoint": true },
+    { "id": "celadon", "name": "Celadon City", "region": "Kanto", "flyPoint": true },
+    { "id": "fuchsia", "name": "Fuchsia City", "region": "Kanto", "flyPoint": true },
+    { "id": "saffron", "name": "Saffron City", "region": "Kanto", "flyPoint": true },
+    { "id": "cinnabar", "name": "Cinnabar Island", "region": "Kanto", "flyPoint": true },
+    { "id": "indigo-plateau", "name": "Indigo Plateau", "region": "Kanto", "flyPoint": true },
+    { "id": "route-16", "name": "Route 16", "region": "Kanto", "flyPoint": false },
+    { "id": "mt-moon", "name": "Mt. Moon", "region": "Kanto", "flyPoint": false }
+  ],
+  "walkEdges": [
+    { "from": "national-park", "to": "goldenrod", "cost": 1 },
+    { "from": "pokeathlon-dome", "to": "goldenrod", "cost": 1 },
+    { "from": "union-cave", "to": "azalea", "cost": 1 },
+    { "from": "route-16", "to": "celadon", "cost": 1 },
+    { "from": "mt-moon", "to": "pewter", "cost": 1 },
+    { "from": "mt-moon", "to": "cerulean", "cost": 1 }
+  ],
+  "crossEdges": [
+    { "from": "goldenrod", "to": "saffron", "type": "magnet-train", "cost": 1, "days": null },
+    { "from": "olivine", "to": "vermilion", "type": "ss-aqua", "cost": 1, "days": ["Mon", "Wed", "Fri", "Sun"] }
+  ]
+}

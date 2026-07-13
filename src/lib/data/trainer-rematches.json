@@ -1,0 +1,1044 @@
+{
+  "source": "Serebii.net",
+  "sourceUrl": "https://www.serebii.net/heartgoldsoulsilver/rematch.shtml",
+  "daySourceUrls": [
+    "https://www.serebii.net/heartgoldsoulsilver/rematch-monday.shtml",
+    "https://www.serebii.net/heartgoldsoulsilver/rematch-tuesday.shtml",
+    "https://www.serebii.net/heartgoldsoulsilver/rematch-wednesday.shtml",
+    "https://www.serebii.net/heartgoldsoulsilver/rematch-thursday.shtml",
+    "https://www.serebii.net/heartgoldsoulsilver/rematch-friday.shtml",
+    "https://www.serebii.net/heartgoldsoulsilver/rematch-saturday.shtml",
+    "https://www.serebii.net/heartgoldsoulsilver/rematch-sunday.shtml"
+  ],
+  "scrapedAt": "2026-07-13",
+  "note": "Los números de Pokégear se obtienen registrando a cada entrenador; ver Serebii.",
+  "trainers": [
+    {
+      "id": "ace-trainer-gaven-route-26",
+      "trainer": "Ace Trainer Gaven",
+      "region": "Kanto",
+      "location": "Route 26",
+      "callDays": [
+        "Thu"
+      ],
+      "period": "Morning",
+      "hours": "4am-10am",
+      "team": [
+        {
+          "name": "Victreebel",
+          "level": 52
+        },
+        {
+          "name": "Kingler",
+          "level": 49
+        },
+        {
+          "name": "Flareon",
+          "level": 50
+        }
+      ]
+    },
+    {
+      "id": "ace-trainer-jamie-route-26",
+      "trainer": "Ace Trainer Jamie",
+      "region": "Kanto",
+      "location": "Route 26",
+      "callDays": [
+        "Fri"
+      ],
+      "period": "Day",
+      "hours": "10am-8pm",
+      "team": [
+        {
+          "name": "Rapidash",
+          "level": 56
+        },
+        {
+          "name": "Ampharos",
+          "level": 59
+        }
+      ]
+    },
+    {
+      "id": "ace-trainer-reena-route-27",
+      "trainer": "Ace Trainer Reena",
+      "region": "Kanto",
+      "location": "Route 27",
+      "callDays": [
+        "Sun"
+      ],
+      "period": "Morning",
+      "hours": "4am-10am",
+      "team": [
+        {
+          "name": "Arcanine",
+          "level": 54
+        },
+        {
+          "name": "Nidoqueen",
+          "level": 53
+        },
+        {
+          "name": "Starmie",
+          "level": 56
+        }
+      ]
+    },
+    {
+      "id": "biker-aiden-route-17",
+      "trainer": "Biker Aiden",
+      "region": "Kanto",
+      "location": "Route 17",
+      "callDays": [
+        "Mon"
+      ],
+      "period": "Morning",
+      "hours": "4am-10am",
+      "team": [
+        {
+          "name": "Tentacruel",
+          "level": 55
+        },
+        {
+          "name": "Hypno",
+          "level": 58
+        },
+        {
+          "name": "Tentacruel",
+          "level": 58
+        }
+      ]
+    },
+    {
+      "id": "biker-ernest-route-17",
+      "trainer": "Biker Ernest",
+      "region": "Kanto",
+      "location": "Route 17",
+      "callDays": [
+        "Sun"
+      ],
+      "period": "Day",
+      "hours": "10am-8pm",
+      "team": [
+        {
+          "name": "Ursaring",
+          "level": 58
+        },
+        {
+          "name": "Azumarill",
+          "level": 54
+        }
+      ]
+    },
+    {
+      "id": "biker-reese-route-17",
+      "trainer": "Biker Reese",
+      "region": "Kanto",
+      "location": "Route 17",
+      "callDays": [
+        "Sun"
+      ],
+      "period": "Night",
+      "hours": "8pm-5am",
+      "team": [
+        {
+          "name": "Arbok",
+          "level": 56
+        },
+        {
+          "name": "Weezing",
+          "level": 55
+        }
+      ]
+    },
+    {
+      "id": "bird-keeper-jose-route-27",
+      "trainer": "Bird Keeper Jose",
+      "region": "Kanto",
+      "location": "Route 27",
+      "callDays": [
+        "Sat"
+      ],
+      "period": "Night",
+      "hours": "8pm-5am",
+      "team": [
+        {
+          "name": "Farfetch'd",
+          "level": 50
+        },
+        {
+          "name": "Farfetch'd",
+          "level": 52
+        },
+        {
+          "name": "Farfetch'd",
+          "level": 53
+        }
+      ]
+    },
+    {
+      "id": "bird-keeper-josh-route-14",
+      "trainer": "Bird Keeper Josh",
+      "region": "Kanto",
+      "location": "Route 14",
+      "callDays": [
+        "Tue"
+      ],
+      "period": "Night",
+      "hours": "8pm-5am",
+      "team": [
+        {
+          "name": "Skarmory",
+          "level": 55
+        },
+        {
+          "name": "Fearow",
+          "level": 55
+        }
+      ]
+    },
+    {
+      "id": "bird-keeper-vance-route-44",
+      "trainer": "Bird Keeper Vance",
+      "region": "Johto",
+      "location": "Route 44",
+      "callDays": [
+        "Wed"
+      ],
+      "period": "Night",
+      "hours": "8pm-5am",
+      "team": [
+        {
+          "name": "Pidgeot",
+          "level": 56
+        },
+        {
+          "name": "Pidgeot",
+          "level": 44
+        },
+        {
+          "name": "Noctowl",
+          "level": 54
+        }
+      ]
+    },
+    {
+      "id": "bug-catcher-arnie-route-35",
+      "trainer": "Bug Catcher Arnie",
+      "region": "Johto",
+      "location": "Route 35",
+      "callDays": [
+        "Tue"
+      ],
+      "period": "Morning",
+      "hours": "4am-10am",
+      "team": [
+        {
+          "name": "Nincada",
+          "level": 45
+        },
+        {
+          "name": "Venomoth",
+          "level": 56
+        }
+      ]
+    },
+    {
+      "id": "bug-catcher-doug-route-2",
+      "trainer": "Bug Catcher Doug",
+      "region": "Kanto",
+      "location": "Route 2",
+      "callDays": [
+        "Wed"
+      ],
+      "period": "Morning",
+      "hours": "4am-10am",
+      "team": [
+        {
+          "name": "Butterfree",
+          "level": 52
+        },
+        {
+          "name": "Ariados",
+          "level": 50
+        }
+      ]
+    },
+    {
+      "id": "bug-catcher-rob-route-2",
+      "trainer": "Bug Catcher Rob",
+      "region": "Kanto",
+      "location": "Route 2",
+      "callDays": [
+        "Fri"
+      ],
+      "period": "Morning",
+      "hours": "4am-10am",
+      "team": [
+        {
+          "name": "Beedrill",
+          "level": 56
+        },
+        {
+          "name": "Butterfree",
+          "level": 56
+        }
+      ]
+    },
+    {
+      "id": "bug-catcher-wade-route-31",
+      "trainer": "Bug Catcher Wade",
+      "region": "Johto",
+      "location": "Route 31",
+      "callDays": [
+        "Tue"
+      ],
+      "period": "Night",
+      "hours": "8pm-5am",
+      "team": [
+        {
+          "name": "Butterfree",
+          "level": 36
+        },
+        {
+          "name": "Butterfree",
+          "level": 52
+        },
+        {
+          "name": "Beedrill",
+          "level": 43
+        },
+        {
+          "name": "Butterfree",
+          "level": 36
+        }
+      ]
+    },
+    {
+      "id": "camper-tanner-route-13",
+      "trainer": "Camper Tanner",
+      "region": "Kanto",
+      "location": "Route 13",
+      "callDays": [
+        "Mon"
+      ],
+      "period": "Night",
+      "hours": "8pm-5am",
+      "team": [
+        {
+          "name": "Sudowoodo",
+          "level": 52
+        },
+        {
+          "name": "Jumpluff",
+          "level": 52
+        },
+        {
+          "name": "Lanturn",
+          "level": 52
+        }
+      ]
+    },
+    {
+      "id": "camper-todd-route-34",
+      "trainer": "Camper Todd",
+      "region": "Johto",
+      "location": "Route 34",
+      "callDays": [
+        "Sat"
+      ],
+      "period": "Morning",
+      "hours": "4am-10am",
+      "team": [
+        {
+          "name": "Graveler",
+          "level": 36
+        },
+        {
+          "name": "Graveler",
+          "level": 44
+        },
+        {
+          "name": "Magcargo",
+          "level": 54
+        },
+        {
+          "name": "Golduck",
+          "level": 56
+        }
+      ]
+    },
+    {
+      "id": "firebreather-walt-route-35",
+      "trainer": "Firebreather Walt",
+      "region": "Johto",
+      "location": "Route 35",
+      "callDays": [
+        "Mon"
+      ],
+      "period": "Day",
+      "hours": "10am-8pm",
+      "team": [
+        {
+          "name": "Magby",
+          "level": 26
+        },
+        {
+          "name": "Magmar",
+          "level": 49
+        },
+        {
+          "name": "Magmortar",
+          "level": 58
+        }
+      ]
+    },
+    {
+      "id": "fisherman-kyle-route-12",
+      "trainer": "Fisherman Kyle",
+      "region": "Kanto",
+      "location": "Route 12",
+      "callDays": [
+        "Wed"
+      ],
+      "period": "Day",
+      "hours": "10am-8pm",
+      "team": [
+        {
+          "name": "Seaking",
+          "level": 48
+        },
+        {
+          "name": "Qwilfish",
+          "level": 49
+        },
+        {
+          "name": "Seaking",
+          "level": 52
+        },
+        {
+          "name": "Kingler",
+          "level": 51
+        }
+      ]
+    },
+    {
+      "id": "fisherman-kyler-route-12",
+      "trainer": "Fisherman Kyler",
+      "region": "Kanto",
+      "location": "Route 12",
+      "callDays": [
+        "Thu"
+      ],
+      "period": "Day",
+      "hours": "10am-8pm",
+      "team": [
+        {
+          "name": "Magikarp",
+          "level": 18
+        },
+        {
+          "name": "Magikarp",
+          "level": 18
+        },
+        {
+          "name": "Magikarp",
+          "level": 18
+        },
+        {
+          "name": "Magikarp",
+          "level": 18
+        },
+        {
+          "name": "Magikarp",
+          "level": 18
+        },
+        {
+          "name": "Magikarp",
+          "level": 18
+        }
+      ]
+    },
+    {
+      "id": "fisherman-ralph-route-32",
+      "trainer": "Fisherman Ralph",
+      "region": "Johto",
+      "location": "Route 32",
+      "callDays": [
+        "Wed"
+      ],
+      "period": "Morning",
+      "hours": "4am-10am",
+      "team": [
+        {
+          "name": "Qwilfish",
+          "level": 53
+        },
+        {
+          "name": "Seaking",
+          "level": 56
+        }
+      ]
+    },
+    {
+      "id": "fisherman-tully-route-42",
+      "trainer": "Fisherman Tully",
+      "region": "Johto",
+      "location": "Route 42",
+      "callDays": [
+        "Sun"
+      ],
+      "period": "Day",
+      "hours": "10am-8pm",
+      "team": [
+        {
+          "name": "Seaking",
+          "level": 41
+        },
+        {
+          "name": "Seaking",
+          "level": 50
+        },
+        {
+          "name": "Qwilfish",
+          "level": 53
+        }
+      ]
+    },
+    {
+      "id": "fisherman-wilton-route-44",
+      "trainer": "Fisherman Wilton",
+      "region": "Johto",
+      "location": "Route 44",
+      "callDays": [
+        "Thu"
+      ],
+      "period": "Morning",
+      "hours": "4am-10am",
+      "team": [
+        {
+          "name": "Seaking",
+          "level": 42
+        },
+        {
+          "name": "Seaking",
+          "level": 46
+        },
+        {
+          "name": "Seaking",
+          "level": 63
+        }
+      ]
+    },
+    {
+      "id": "gentleman-alfred-shining-lighthouse-2f",
+      "trainer": "Gentleman Alfred",
+      "region": "Johto",
+      "location": "Shining Lighthouse - 2F",
+      "callDays": [
+        "Tue"
+      ],
+      "period": "Day",
+      "hours": "10am-8pm",
+      "team": [
+        {
+          "name": "Noctowl",
+          "level": 58
+        }
+      ]
+    },
+    {
+      "id": "hiker-anthony-route-33",
+      "trainer": "Hiker Anthony",
+      "region": "Johto",
+      "location": "Route 33",
+      "callDays": [
+        "Fri"
+      ],
+      "period": "Night",
+      "hours": "8pm-5am",
+      "team": [
+        {
+          "name": "Graveler",
+          "level": 41
+        },
+        {
+          "name": "Golem",
+          "level": 49
+        },
+        {
+          "name": "Machamp",
+          "level": 55
+        }
+      ]
+    },
+    {
+      "id": "hiker-kenny-route-13",
+      "trainer": "Hiker Kenny",
+      "region": "Kanto",
+      "location": "Route 13",
+      "callDays": [
+        "Sat"
+      ],
+      "period": "Day",
+      "hours": "10am-8pm",
+      "team": [
+        {
+          "name": "Sandslash",
+          "level": 46
+        },
+        {
+          "name": "Graveler",
+          "level": 44
+        },
+        {
+          "name": "Golem",
+          "level": 49
+        },
+        {
+          "name": "Steelix",
+          "level": 54
+        }
+      ]
+    },
+    {
+      "id": "hiker-parry-route-45",
+      "trainer": "Hiker Parry",
+      "region": "Johto",
+      "location": "Route 45",
+      "callDays": [
+        "Fri"
+      ],
+      "period": "Day",
+      "hours": "10am-8pm",
+      "team": [
+        {
+          "name": "Steelix",
+          "level": 56
+        },
+        {
+          "name": "Golem",
+          "level": 52
+        }
+      ]
+    },
+    {
+      "id": "lass-dana-route-38",
+      "trainer": "Lass Dana",
+      "region": "Johto",
+      "location": "Route 38",
+      "callDays": [
+        "Thu"
+      ],
+      "period": "Night",
+      "hours": "8pm-5am",
+      "team": [
+        {
+          "name": "Golduck",
+          "level": 51
+        },
+        {
+          "name": "Ampharos",
+          "level": 54
+        }
+      ]
+    },
+    {
+      "id": "lass-krise-national-park",
+      "trainer": "Lass Krise",
+      "region": "Johto",
+      "location": "National Park",
+      "callDays": [
+        "Sun"
+      ],
+      "period": "Morning",
+      "hours": "4am-10am",
+      "team": [
+        {
+          "name": "Vileplume",
+          "level": 53
+        },
+        {
+          "name": "Marowak",
+          "level": 54
+        }
+      ]
+    },
+    {
+      "id": "picnicker-erin-route-46",
+      "trainer": "Picnicker Erin",
+      "region": "Johto",
+      "location": "Route 46",
+      "callDays": [
+        "Sat"
+      ],
+      "period": "Night",
+      "hours": "8pm-5am",
+      "team": [
+        {
+          "name": "Cherrim",
+          "level": 42
+        },
+        {
+          "name": "Sunflora",
+          "level": 46
+        },
+        {
+          "name": "Bellossom",
+          "level": 49
+        },
+        {
+          "name": "Rapidash",
+          "level": 53
+        }
+      ]
+    },
+    {
+      "id": "picnicker-gina-route-34",
+      "trainer": "Picnicker Gina",
+      "region": "Johto",
+      "location": "Route 34",
+      "callDays": [
+        "Sun"
+      ],
+      "period": "Day",
+      "hours": "10am-8pm",
+      "team": [
+        {
+          "name": "Skiploom",
+          "level": 30
+        },
+        {
+          "name": "Jumpluff",
+          "level": 36
+        },
+        {
+          "name": "Venusaur",
+          "level": 55
+        }
+      ]
+    },
+    {
+      "id": "picnicker-liz-route-32",
+      "trainer": "Picnicker Liz",
+      "region": "Johto",
+      "location": "Route 32",
+      "callDays": [
+        "Thu"
+      ],
+      "period": "Day",
+      "hours": "10am-8pm",
+      "team": [
+        {
+          "name": "Victreebel",
+          "level": 47
+        },
+        {
+          "name": "Nidoking",
+          "level": 58
+        },
+        {
+          "name": "Nidoqueen",
+          "level": 60
+        }
+      ]
+    },
+    {
+      "id": "picnicker-tiffany-route-43",
+      "trainer": "Picnicker Tiffany",
+      "region": "Johto",
+      "location": "Route 43",
+      "callDays": [
+        "Tue"
+      ],
+      "period": "Day",
+      "hours": "10am-8pm",
+      "team": [
+        {
+          "name": "Clefable",
+          "level": 61
+        }
+      ]
+    },
+    {
+      "id": "pok-maniac-brent-route-43",
+      "trainer": "PokéManiac Brent",
+      "region": "Johto",
+      "location": "Route 43",
+      "callDays": [
+        "Mon"
+      ],
+      "period": "Morning",
+      "hours": "4am-10am",
+      "team": [
+        {
+          "name": "Gyarados",
+          "level": 48
+        },
+        {
+          "name": "Lickitung",
+          "level": 40
+        },
+        {
+          "name": "Nidoqueen",
+          "level": 58
+        },
+        {
+          "name": "Nidoking",
+          "level": 58
+        }
+      ]
+    },
+    {
+      "id": "sailor-huey-shining-lighthouse-2f",
+      "trainer": "Sailor Huey",
+      "region": "Johto",
+      "location": "Shining Lighthouse - 2F",
+      "callDays": [
+        "Wed"
+      ],
+      "period": "Night",
+      "hours": "8pm-5am",
+      "team": [
+        {
+          "name": "Politoed",
+          "level": 48
+        },
+        {
+          "name": "Poliwrath",
+          "level": 52
+        }
+      ]
+    },
+    {
+      "id": "school-kid-alan-route-36",
+      "trainer": "School Kid Alan",
+      "region": "Johto",
+      "location": "Route 36",
+      "callDays": [
+        "Wed"
+      ],
+      "period": "Day",
+      "hours": "10am-8pm",
+      "team": [
+        {
+          "name": "Xatu",
+          "level": 47
+        },
+        {
+          "name": "Tangrowth",
+          "level": 54
+        },
+        {
+          "name": "Quagsire",
+          "level": 47
+        },
+        {
+          "name": "Yanmega",
+          "level": 54
+        }
+      ]
+    },
+    {
+      "id": "school-kid-billy-route-15",
+      "trainer": "School Kid Billy",
+      "region": "Kanto",
+      "location": "Route 15",
+      "callDays": [
+        "Fri"
+      ],
+      "period": "Night",
+      "hours": "8pm-5am",
+      "team": [
+        {
+          "name": "Mr. Mime",
+          "level": 50
+        },
+        {
+          "name": "Parasect",
+          "level": 55
+        },
+        {
+          "name": "Poliwrath",
+          "level": 53
+        },
+        {
+          "name": "Ditto",
+          "level": 51
+        }
+      ]
+    },
+    {
+      "id": "school-kid-chad-route-38",
+      "trainer": "School Kid Chad",
+      "region": "Johto",
+      "location": "Route 38",
+      "callDays": [
+        "Fri"
+      ],
+      "period": "Morning",
+      "hours": "4am-10am",
+      "team": [
+        {
+          "name": "Mr. Mime",
+          "level": 46
+        },
+        {
+          "name": "Magneton",
+          "level": 56
+        }
+      ]
+    },
+    {
+      "id": "school-kid-jack-national-park",
+      "trainer": "School Kid Jack",
+      "region": "Johto",
+      "location": "National Park",
+      "callDays": [
+        "Mon"
+      ],
+      "period": "Morning",
+      "hours": "4am-10am",
+      "team": [
+        {
+          "name": "Electrode",
+          "level": 43
+        },
+        {
+          "name": "Vileplume",
+          "level": 52
+        },
+        {
+          "name": "Arcanine",
+          "level": 52
+        }
+      ]
+    },
+    {
+      "id": "school-kid-torin-route-14",
+      "trainer": "School Kid Torin",
+      "region": "Kanto",
+      "location": "Route 14",
+      "callDays": [
+        "Wed"
+      ],
+      "period": "Night",
+      "hours": "8pm-5am",
+      "team": [
+        {
+          "name": "Sandslash",
+          "level": 52
+        },
+        {
+          "name": "Golbat",
+          "level": 53
+        },
+        {
+          "name": "Vulpix",
+          "level": 52
+        }
+      ]
+    },
+    {
+      "id": "teacher-hillary-route-15",
+      "trainer": "Teacher Hillary",
+      "region": "Kanto",
+      "location": "Route 15",
+      "callDays": [
+        "Thu"
+      ],
+      "period": "Night",
+      "hours": "8pm-5am",
+      "team": [
+        {
+          "name": "Ambipom",
+          "level": 55
+        },
+        {
+          "name": "Sunflora",
+          "level": 55
+        }
+      ]
+    },
+    {
+      "id": "twins-kay-tia-route-15",
+      "trainer": "Twins Kay & Tia",
+      "region": "Kanto",
+      "location": "Route 15",
+      "callDays": [
+        "Sat"
+      ],
+      "period": "Night",
+      "hours": "8pm-5am",
+      "team": [
+        {
+          "name": "Quagsire",
+          "level": 55
+        },
+        {
+          "name": "Quagsire",
+          "level": 55
+        }
+      ]
+    },
+    {
+      "id": "young-couple-tim-sue-route-13",
+      "trainer": "Young Couple Tim & Sue",
+      "region": "Kanto",
+      "location": "Route 13",
+      "callDays": [
+        "Fri"
+      ],
+      "period": "Day",
+      "hours": "10am-8pm",
+      "team": [
+        {
+          "name": "Alakazam",
+          "level": 54
+        },
+        {
+          "name": "Golduck",
+          "level": 56
+        }
+      ]
+    },
+    {
+      "id": "youngster-ian-route-34",
+      "trainer": "Youngster Ian",
+      "region": "Johto",
+      "location": "Route 34",
+      "callDays": [
+        "Sat"
+      ],
+      "period": "Morning",
+      "hours": "4am-10am",
+      "team": [
+        {
+          "name": "Primeape",
+          "level": 47
+        },
+        {
+          "name": "Dugtrio",
+          "level": 56
+        }
+      ]
+    },
+    {
+      "id": "youngster-joey-route-30",
+      "trainer": "Youngster Joey",
+      "region": "Johto",
+      "location": "Route 30",
+      "callDays": [
+        "Mon"
+      ],
+      "period": "Day",
+      "hours": "10am-8pm",
+      "team": [
+        {
+          "name": "Raticate",
+          "level": 54
+        }
+      ]
+    }
+  ]
+}
