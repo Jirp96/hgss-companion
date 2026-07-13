@@ -17,6 +17,12 @@
   $: pathIndex = new Map(path.map((n, i) => [n.id, i + 1]));
   // Only the app's own markers for emphasised nodes are drawn over the image.
   $: marked = mapNodes.filter((n) => highlightSet.has(n.id) || pathSet.has(n.id));
+
+  const emph = (id: string) => highlightSet.has(id) || pathSet.has(id);
+  // Label placement: below the node if it sits near the top edge, else above;
+  // anchor shifts near the left/right edges so text stays inside the map.
+  const labelY = (n: MapNode) => (n.y < 28 ? n.y + 20 : n.y - 13);
+  const anchor = (n: MapNode) => (n.x < 70 ? 'start' : n.x > 890 ? 'end' : 'middle');
 </script>
 
 <svg viewBox="0 0 960 424" class="map" role="img" aria-label="Mapa de Johto y Kanto">
@@ -40,6 +46,19 @@
         <text class="seq" x={n.x} y={n.y + 4}>{pathIndex.get(n.id)}</text>
       {/if}
     </g>
+  {/each}
+
+  <!-- town name labels on every node -->
+  {#each mapNodes as n (n.id)}
+    <text
+      class="label"
+      class:on={emph(n.id)}
+      x={n.x}
+      y={labelY(n)}
+      text-anchor={anchor(n)}
+    >
+      {n.name}
+    </text>
   {/each}
 </svg>
 
@@ -75,5 +94,21 @@
     stroke: var(--both);
     stroke-width: 4;
     stroke-dasharray: 9 6;
+  }
+  /* Labels sit over a fixed-colour image, so their colours are hard-coded
+     (independent of the app light/dark theme) for legibility. */
+  .label {
+    font-size: 10px;
+    font-weight: 600;
+    fill: #14181f;
+    stroke: #ffffff;
+    stroke-width: 2.4px;
+    paint-order: stroke;
+    pointer-events: none;
+  }
+  .label.on {
+    font-size: 11.5px;
+    font-weight: 800;
+    fill: #7a1020;
   }
 </style>
