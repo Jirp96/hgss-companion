@@ -85,6 +85,52 @@ export interface CrossEdge {
   days: Day[] | null;
 }
 
+/** Kind of progression step, used for the icon/colour in the guide. */
+export type StepKind = 'story' | 'gym' | 'rocket' | 'rival' | 'league' | 'legendary' | 'unlock';
+
+export interface BadgeInfo {
+  order: number; // 1..8 within its region
+  region: Region;
+  es: string;
+  en: string;
+  leader: string;
+  type: string;
+}
+
+/** External reference (Serebii page) attached to a step or chapter. */
+export interface GuideLink {
+  label: string;
+  url: string;
+}
+
+export interface ProgressionStep {
+  id: string;
+  name: string;
+  kind: StepKind;
+  location: string;
+  region: Region;
+  mapNode: string | null;
+  level: string;
+  badge: BadgeInfo | null;
+  items: string[];
+  detail: string;
+  /** What this step opens up (HMs, areas, mechanics). */
+  unlocks: string[];
+  links: GuideLink[];
+  versionNotes?: Partial<Record<Version, string>>;
+  /** Side content: skippable without blocking the story. */
+  optional: boolean;
+}
+
+export interface ProgressionChapter {
+  id: string;
+  title: string;
+  subtitle: string;
+  region: Region;
+  links: GuideLink[];
+  steps: ProgressionStep[];
+}
+
 export interface Reminder {
   id: string;
   eventId: string;

@@ -7,13 +7,15 @@
   import WeekView from './components/WeekView.svelte';
   import RematchesView from './components/RematchesView.svelte';
   import RouteView from './components/RouteView.svelte';
+  import ProgressionView from './components/ProgressionView.svelte';
 
-  type Tab = 'today' | 'week' | 'rematches' | 'route';
+  type Tab = 'today' | 'week' | 'rematches' | 'route' | 'progression';
   const tabs: { id: Tab; label: string; icon: string }[] = [
     { id: 'today', label: 'Hoy', icon: '📅' },
     { id: 'week', label: 'Semana', icon: '🗓' },
     { id: 'rematches', label: 'Rematches', icon: '📞' },
     { id: 'route', label: 'Ruta', icon: '🧭' },
+    { id: 'progression', label: 'Progresión', icon: '🏅' },
   ];
   let active: Tab = 'today';
 
@@ -52,6 +54,8 @@
     <RematchesView />
   {:else if active === 'route'}
     <RouteView />
+  {:else if active === 'progression'}
+    <ProgressionView />
   {/if}
 </main>
 

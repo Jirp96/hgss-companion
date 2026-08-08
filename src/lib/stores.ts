@@ -73,6 +73,31 @@ function createPermanentDone() {
 
 export const permanentDone = createPermanentDone();
 
+/**
+ * Story progression: ids of completed guide steps. Like `permanentDone` these
+ * never reset, but they live under their own key so clearing one checklist
+ * doesn't wipe the other.
+ */
+function createProgress() {
+  const store = persisted<string[]>('progress', []);
+  function toggle(id: string) {
+    store.update((ids) => (ids.includes(id) ? ids.filter((x) => x !== id) : [...ids, id]));
+  }
+  /** Mark every id up to and including `id` (used by "hasta acá"). */
+  function completeThrough(orderedIds: string[], id: string) {
+    const cut = orderedIds.indexOf(id);
+    if (cut < 0) return;
+    const upTo = orderedIds.slice(0, cut + 1);
+    store.update((ids) => Array.from(new Set([...ids, ...upTo])));
+  }
+  function reset() {
+    store.set([]);
+  }
+  return { subscribe: store.subscribe, toggle, completeThrough, reset };
+}
+
+export const progress = createProgress();
+
 // A ticking clock (updates every 30s) so time-window UI stays fresh.
 function createNow() {
   const store = writable<Date>(new Date());
