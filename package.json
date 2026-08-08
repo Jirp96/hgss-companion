@@ -9,6 +9,7 @@
     "preview": "node --require ./scripts/crypto-polyfill.cjs node_modules/vite/bin/vite.js preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "scrape": "node scripts/scrape.mjs",
+    "docs:progresion": "node scripts/gen-progression-doc.mjs",
     "test": "node --require ./scripts/crypto-polyfill.cjs node_modules/vitest/vitest.mjs run"
   },
   "devDependencies": {

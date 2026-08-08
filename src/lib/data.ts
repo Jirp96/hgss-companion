@@ -2,7 +2,18 @@ import eventsJson from './data/events.json';
 import gymJson from './data/gym-rematches.json';
 import trainerJson from './data/trainer-rematches.json';
 import mapJson from './data/map.json';
-import type { GameEvent, GymLeader, TrainerRematch, MapNode, WalkEdge, CrossEdge } from './types';
+import progressionJson from './data/progression.json';
+import type {
+  GameEvent,
+  GymLeader,
+  TrainerRematch,
+  MapNode,
+  WalkEdge,
+  CrossEdge,
+  ProgressionChapter,
+  ProgressionStep,
+  BadgeInfo,
+} from './types';
 
 export const events = eventsJson.events as GameEvent[];
 export const eventsSource = eventsJson.sourceUrl;
@@ -33,6 +44,17 @@ export const allEvents: GameEvent[] = [...events, ...phoneEvents];
 export const trainers = trainerJson.trainers as TrainerRematch[];
 export const trainerNote = trainerJson.note;
 export const trainerSource = trainerJson.sourceUrl;
+
+export const progression = progressionJson.chapters as ProgressionChapter[];
+export const progressionSource = progressionJson.sourceUrl;
+
+/** Every step, flattened in story order — handy for "next step" and counters. */
+export const progressionSteps: ProgressionStep[] = progression.flatMap((c) => c.steps);
+
+/** The 16 badges in order, each paired with the step that awards it. */
+export const badges: { badge: BadgeInfo; stepId: string }[] = progressionSteps
+  .filter((s) => s.badge)
+  .map((s) => ({ badge: s.badge as BadgeInfo, stepId: s.id }));
 
 export const mapNodes = mapJson.nodes as MapNode[];
 export const walkEdges = mapJson.walkEdges as WalkEdge[];

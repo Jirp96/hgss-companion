@@ -15,6 +15,10 @@ cruces entre Johto y Kanto. App estática, pensada para **GitHub Pages**.
 - **Recordatorios** con notificaciones del navegador (solo con la pestaña abierta).
 - **Rematches**: 16 líderes + 43 entrenadores, con filtros por región y día de llamada, y equipos.
 - **Ruta**: ordena los eventos del día minimizando cruces de región (grafo + TSP).
+- **Progresión**: guía completa de la historia (72 pasos) — gimnasios de Johto, Liga, viaje a Kanto,
+  gimnasios de Kanto, Liga x2, Red y los legendarios/regalos del post-juego — con línea de tiempo,
+  tablero de las 16 medallas, links a Serebii y checklist permanente. La misma guía en texto está
+  en [`PROGRESION.md`](PROGRESION.md).
 
 ## Arquitectura
 
@@ -34,6 +38,7 @@ serebii  ──(npm run scrape)──▶  src/lib/data/*.json  ──▶  app Sv
 | `events.json` | `dailyevent.shtml` | Curado a mano (set fijo y chico) |
 | `gym-rematches.json` | `gym-rematch.shtml` | Curado a mano |
 | `map.json` | — | Curado a mano (la topología no está tabulada en Serebii) |
+| `progression.json` | Bulbapedia / Serebii | Curado a mano; `PROGRESION.md` se genera desde acá |
 
 Cada JSON incluye `sourceUrl` para la atribución en la UI.
 
@@ -45,6 +50,7 @@ npm run dev       # servidor de desarrollo
 npm run build     # build de producción a dist/
 npm test          # tests del pathfinding (Vitest)
 npm run scrape    # regenera trainer-rematches.json desde Serebii
+npm run docs:progresion   # regenera PROGRESION.md desde progression.json
 ```
 
 > **Node 16**: el proyecto usa Vite 4 / Svelte 4 y un pequeño polyfill
